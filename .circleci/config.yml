@@ -28,12 +28,10 @@ jobs:
 
       - run:
           name: install dependencies
-          command: |             
+ 
+          command: |
+            ls -la             
             python3 -m venv venv
-            . venv/bin/activate
-            pip install --upgrade pip && pip install -r requirements.txt
-      - save_cache:
-          paths:
             - ./venv
           key: project-ml-microservice-kubernetes-{{ checksum "requirements.txt" }}
         
