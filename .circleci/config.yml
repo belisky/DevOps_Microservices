@@ -15,29 +15,27 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    working_directory: /project-ml-microservice-kubernetes/
-
+    working_directory: ~/DevOps_Microservices/project-ml-microservice-kubernetes
     steps:
-      - checkout
-
+      - checkout:
+          path: ~/DevOps_Microservices
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
+          - project-ml-microservice-kubernetes-{{ checksum "requirements.txt" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - project-ml-microservice-kubernetes-
 
       - run:
           name: install dependencies
-          command: |
-             
+          command: |             
             python3 -m venv venv
             . venv/bin/activate
             pip install --upgrade pip && pip install -r requirements.txt
       - save_cache:
           paths:
             - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
+          key: project-ml-microservice-kubernetes-{{ checksum "requirements.txt" }}
         
       # run tests!
       - run:
