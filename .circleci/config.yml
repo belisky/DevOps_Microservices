@@ -15,7 +15,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    working_directory: /project-ml-microservice-kubernetes
+    working_directory: ~/
 
     steps:
       - checkout
@@ -30,6 +30,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            cd /project-ml-microservice-kubernetes
             python3 -m venv venv
             . venv/bin/activate
             pip install --upgrade pip && pip install -r requirements.txt
