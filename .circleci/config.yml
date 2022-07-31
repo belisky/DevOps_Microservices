@@ -51,4 +51,4 @@ jobs:
           name: run lint
           command: |
             . venv/bin/activate
-            make lint
+            pylint --disable=R,C,W1203,W1202 app.py
