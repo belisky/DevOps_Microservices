@@ -5,7 +5,7 @@ This project (project 4) is all about containers(Docker) and Kubernetes.
 
 ### Accomplishments
 * Successfully Created a Docker image of a Machine_learning Prediction model built in flask.
-* Pushed the Docker image to my [DockerHub](nobel001/boston_housing_prediction)
+* Pushed the Docker image to my [DockerHub](https://hub.docker.com/r/nobel001/boston_housing_prediction)
 * Deployed the said image and tested it with sample data to obtain predictions via logs
 * Deployed a Kubernetes Cluster of the same Docker image on Docker Desktop
 * Tested the Kuberneted Cluster with a sample data to obtain prediction via logs
