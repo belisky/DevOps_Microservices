@@ -3,10 +3,17 @@
 ## About
 This project (project 4) is all about containers(Docker) and Kubernetes.
 
-### Accomplishments
-* Successfully Created a Docker image of a Machine_learning Prediction model built in flask.
-* Pushed the Docker image to my [DockerHub](https://hub.docker.com/r/nobel001/boston_housing_prediction)
-* Deployed the said image and tested it with sample data to obtain predictions via logs
+### Accomplishments using CI/CD
+* Successfully Created a Continuous Deployment Pipeline using circleCI that:
+  * Successfully Creates a Docker image of a Machine_learning Prediction model built in flask on every commit pushed to main branch.
+  * Pushed the Docker image to my [DockerHub repository](https://hub.docker.com/r/nobel001/boston_housing_prediction)
+  * Deployed the said image and tested it with sample data to obtain predictions via logs
+  ## Pipeline Stages:
+    * Build
+    * Unit Test
+    * Deploy
+    
+## Manual Kubernetes Cluster Deployment.
 * Deployed a Kubernetes Cluster of the same Docker image on Docker Desktop
 * Tested the Kuberneted Cluster with a sample data to obtain prediction via logs
 
